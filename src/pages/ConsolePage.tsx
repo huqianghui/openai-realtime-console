@@ -11,7 +11,7 @@
 const LOCAL_RELAY_SERVER_URL: string =
   process.env.REACT_APP_LOCAL_RELAY_SERVER_URL || '';
 
-import { useEffect, useRef, useCallback, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 import { RealtimeClient } from '@openai/realtime-api-beta';
 import { ItemType } from '@openai/realtime-api-beta/dist/lib/client.js';
@@ -19,13 +19,12 @@ import { WavRecorder, WavStreamPlayer } from '../lib/wavtools/index.js';
 import { instructions } from '../utils/conversation_config.js';
 import { WavRenderer } from '../utils/wav_renderer';
 
-import { X, Edit, Zap, ArrowUp, ArrowDown } from 'react-feather';
+import { ArrowDown, ArrowUp, Edit, X, Zap } from 'react-feather';
 import { Button } from '../components/button/Button';
-import { Toggle } from '../components/toggle/Toggle';
 import { Map } from '../components/Map';
+import { Toggle } from '../components/toggle/Toggle';
 
 import './ConsolePage.scss';
-import { isJsxOpeningLikeElement } from 'typescript';
 
 /**
  * Type for result from get_weather() function call
@@ -85,6 +84,7 @@ export function ConsolePage() {
       LOCAL_RELAY_SERVER_URL
         ? { url: LOCAL_RELAY_SERVER_URL }
         : {
+            url: 'wss://xxx.openai.azure.com/openai/realtime?api-version=2024-10-01-preview&x-ms-client-request-id=64512029-db94-4cf1-baf1-ce238f6cb662&deployment=gpt-4o-realtime-preview',
             apiKey: apiKey,
             dangerouslyAllowAPIKeyInBrowser: true,
           }
