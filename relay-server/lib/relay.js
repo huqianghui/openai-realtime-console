@@ -1,5 +1,5 @@
-import { WebSocketServer } from 'ws';
 import { RealtimeClient } from '@openai/realtime-api-beta';
+import { WebSocketServer } from 'ws';
 
 export class RealtimeRelay {
   constructor(apiKey) {
@@ -32,7 +32,7 @@ export class RealtimeRelay {
 
     // Instantiate new client
     this.log(`Connecting with key "${this.apiKey.slice(0, 3)}..."`);
-    const client = new RealtimeClient({ apiKey: this.apiKey });
+    const client = new RealtimeClient({url: 'wss://XXX.openai.azure.com/openai/realtime?api-version=2024-10-01-preview&deployment=gpt-4o-realtime-preview', apiKey: this.apiKey });
 
     // Relay: OpenAI Realtime API Event -> Browser Event
     client.realtime.on('server.*', (event) => {
