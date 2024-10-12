@@ -84,7 +84,7 @@ export function ConsolePage() {
       LOCAL_RELAY_SERVER_URL
         ? { url: LOCAL_RELAY_SERVER_URL }
         : {
-            url: 'wss://xxx.openai.azure.com/openai/realtime?api-version=2024-10-01-preview&x-ms-client-request-id=64512029-db94-4cf1-baf1-ce238f6cb662&deployment=gpt-4o-realtime-preview',
+            url: 'wss://xxx.openai.azure.com/openai/realtime?api-version=2024-10-01-preview&deployment=gpt-4o-realtime-preview',
             apiKey: apiKey,
             dangerouslyAllowAPIKeyInBrowser: true,
           }
