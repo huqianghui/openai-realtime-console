@@ -10,7 +10,6 @@ management in the browser.
 <img src="/readme/realtime-console-demo.png" width="800" />
 
 
-***为了适配Azure OpenAI， 替换src/pages/ConsolePage.tsx 和 relay-server/lib/relay.js中的url为你自己的 如下：***
 ***adapt to Azure OpenAI， replace  url in src/pages/ConsolePage.tsx and relay-server/lib/relay.js by your aoai url as below：***
 wss://XXX.openai.azure.com/openai/realtime?api-version=2024-10-01-preview&deployment=gpt-4o-realtime-preview
 
